@@ -11,10 +11,9 @@ function App() {
   const [isOpen, setIsOpen] = useState(false)
   const [postId, setPostId] = useState<number | null>(null)
   const [body, setBody] = useState('')
-  // React.useCallback.
+
   const toggleModal = useCallback((id: number, body: string) => () => {
     setIsOpen(!isOpen);
-    // console.log(`Post id: ${id}`);
     setPostId(id)
     setBody(body)
   }, [isOpen]);
